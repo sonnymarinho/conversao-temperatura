@@ -20,4 +20,12 @@ Consiste em uma aplicação web que realiza a conversão de temperatura de celsi
 
 3. Criando a imagem e colocando a aplicação para funcionar, a aplicação deve etar disponível para ser acessada localmente no endereço `http://localhost:8080/`
 
+## Kubernets
+
+Rodando a aplicação pelo Kubernets:
+
+1. Para inciar a aplicação pelo Kubernets, utilizando o k3d, utilize o comando `k3d cluster create meucluster --agents 3 --servers 3 -p "8080:30000@loadbalancer"` para criar o cluster.
+
+2. E para executar as configurações descritas no manifesto, e rodar a aplicação, utilize `kubectl apply -f deployment.yaml`, no arquivo dentro da pasta **k8s**
+
 ![example](docs/application-demo.png)
